@@ -65,6 +65,8 @@ const Hardware: React.FC = () => {
                 alt="Smart Glasses Blueprint" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/25" />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent" />
           </div>
 
