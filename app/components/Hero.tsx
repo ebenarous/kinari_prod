@@ -3,14 +3,6 @@
 import React from 'react';
 import { ArrowDown, Play } from 'lucide-react';
 
-// Generate static stars to avoid hydration mismatches
-const STARS = Array.from({ length: 70 }).map((_, i) => ({
-  top: `${Math.floor(Math.random() * 100)}%`,
-  left: `${Math.floor(Math.random() * 100)}%`,
-  size: Math.random() > 0.8 ? 3 : Math.random() > 0.5 ? 2 : 1,
-  opacity: Math.random() * 0.7 + 0.2,
-}));
-
 const Hero: React.FC = () => {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -29,36 +21,26 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
-      {/* Abstract Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-blue-900/20 blur-[120px] rounded-full pointer-events-none" />
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/front.jpeg')",
+        }}
+      />
       
-      {/* Starry Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {STARS.map((star, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-white"
-            style={{
-              top: star.top,
-              left: star.left,
-              width: `${star.size}px`,
-              height: `${star.size}px`,
-              opacity: star.opacity,
-              boxShadow: `0 0 ${star.size * 2}px rgba(255, 255, 255, ${star.opacity})`
-            }}
-          />
-        ))}
-      </div>
+      {/* Dark Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/75" />
 
       <div className="z-10 px-6 max-w-screen-2xl mx-auto text-center flex flex-col items-center space-y-8 relative">
         
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 fade-in-up delay-100">
-          The Co-Pilot for <br className="hidden md:block" />
-          Aerospace Technicians.
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight fade-in-up delay-100">
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60">The Co-Pilot for</span> <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-gray-300 to-gray-700">Precision Builders.</span>
         </h1>
         
         <p className="text-lg md:text-xl text-zinc-400 max-w-2xl fade-in-up delay-200 leading-relaxed">
-          Developing the next generation of wearable AI. Real-time audiovisual intelligence for complex MRO & assembly operations.
+          Developing the next generation of wearable AI. Real-time audiovisual intelligence for complex electro-mechanical assembly operations.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-5 fade-in-up delay-300 pt-6 w-full sm:w-auto">

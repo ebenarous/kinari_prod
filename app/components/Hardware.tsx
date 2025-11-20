@@ -5,11 +5,11 @@ import { Camera, Mic, BatteryFull, Feather } from 'lucide-react';
 
 const Hardware: React.FC = () => {
   // Using the uploaded blueprint image
-  const glassImage = "/glasses-blueprint.png";
+  const glassImage = "/glasses_purple.jpeg";
 
   const features = [
     {
-      icon: <Camera className="w-6 h-6 text-blue-400" />,
+      icon: <Camera className="w-6 h-6 text-purple-400" />,
       title: "Camera",
       details: [
         "12 MP ultra-wide stills",
@@ -18,7 +18,7 @@ const Hardware: React.FC = () => {
       ]
     },
     {
-      icon: <Mic className="w-6 h-6 text-blue-400" />,
+      icon: <Mic className="w-6 h-6 text-purple-400" />,
       title: "Audio",
       details: [
         "5-mic array",
@@ -27,16 +27,16 @@ const Hardware: React.FC = () => {
       ]
     },
     {
-      icon: <BatteryFull className="w-6 h-6 text-blue-400" />,
+      icon: <BatteryFull className="w-6 h-6 text-purple-400" />,
       title: "Battery",
       details: [
-        "Up to 8 hours typical use",
+        "Up to 3 hours typical use",
         "Up to 48 hours with case",
         "Rapid charging"
       ]
     },
     {
-      icon: <Feather className="w-6 h-6 text-blue-400" />,
+      icon: <Feather className="w-6 h-6 text-purple-400" />,
       title: "Weight",
       details: [
         "52g featherlight design",
@@ -59,7 +59,7 @@ const Hardware: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Column: Image */}
-          <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-zinc-900 border border-white/10 shadow-2xl shadow-blue-900/10 group">
+          <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-zinc-900 border border-white/10 shadow-2xl shadow-purple-900/10 group">
             <img 
                 src={glassImage} 
                 alt="Smart Glasses Blueprint" 
@@ -72,14 +72,14 @@ const Hardware: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {features.map((feature, idx) => (
               <div key={idx} className="bg-zinc-900/50 border border-white/5 p-6 rounded-xl hover:bg-white/5 transition-colors duration-300">
-                <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4 border border-blue-500/20">
+                <div className="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-4 border border-purple-500/20">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <ul className="space-y-2">
                   {feature.details.map((detail, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-zinc-400">
-                      <span className="w-1 h-1 rounded-full bg-blue-500 mt-2 shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-purple-500 mt-2 shrink-0" />
                       <span>{detail}</span>
                     </li>
                   ))}

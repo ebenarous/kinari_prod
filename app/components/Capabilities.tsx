@@ -13,7 +13,7 @@ const Capabilities: React.FC = () => {
             Intelligent Operations
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
-            Our multimodal AI bridges the gap between incumbent documentation and fast-paced field work.
+            Our multimodal AI bridges the gap between incumbent documentation and fast-paced factory work.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ const Capabilities: React.FC = () => {
               Universal Context Ingestion
             </h3>
             <p className="text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors">
-              The system digests unstructured data - PDFs, AMMs, technical drawings, or images. It breaks complex documentation down into digestible, actionable steps, creating an instant SOP tailored for the field.
+              The system digests unstructured data - PDFs, OEM Manuals, wiring diagrams, or images. It breaks complex documentation down into digestible, actionable steps, creating an instant SOP tailored for the shop floor.
             </p>
           </div>
 
