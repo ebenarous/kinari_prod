@@ -9,8 +9,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Kinari Systems - The Co-Pilot for Operations",
-  description: "Developing the next generation of wearable AI. Real-time audiovisual intelligence for complex MRO & assembly operations.",
+  description: "Developing the next generation of wearable AI. Real-time audiovisual intelligence for complex electro-mechanical assembly operations.",
 };
+
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 
 export default function RootLayout({
   children,
@@ -23,6 +26,8 @@ export default function RootLayout({
         className={`${inter.variable} antialiased`}
       >
         {children}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
